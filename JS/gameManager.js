@@ -31,5 +31,20 @@ let GameManager = {
     },
     setPreFight: function() {
 
+        let getHeader = document.querySelector(".header");
+        let getActions = document.querySelector(".actions");
+        let getArena = document.querySelector(".arena");
+        getHeader.innerHTML = '<p>Task: Find An Enemy!!</p>';
+        getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="GameManager.setFight()" >Generate Enemy</a>';
+        getArena.style.visibility = "visible";
+    },
+    setFight: function() {
+        let getHeader = document.querySelector(".header");
+        let getActions = document.querySelector(".actions");
+        let getEnemy = document.querySelector(".enemy");
+
+        //Create Enemy
+
+        
     }
 }
