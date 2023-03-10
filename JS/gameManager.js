@@ -35,7 +35,7 @@ let GameManager = {
         let getActions = document.querySelector(".actions");
         let getArena = document.querySelector(".arena");
         getHeader.innerHTML = '<p>Task: Find An Enemy!!</p>';
-        getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="GameManager.setFight()" >Generate Enemy</a>';
+        getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="GameManager.setFight()">Find An Enemy</a>';
         getArena.style.visibility = "visible";
     },
     setFight: function() {
@@ -45,6 +45,39 @@ let GameManager = {
 
         //Create Enemy
 
-        
+        let enemy00 = new Enemy("Huntress", 100, 0, 50, 100);
+        let enemy01 = new Enemy("Rogue", 200, 0, 150, 80);
+        let enemy02 = new Enemy("Shadow", 100, 0, 50, 100);
+        let enemy03 = new Enemy("Viking", 100, 0, 50, 100);
+
+        //stats will be updated!!
+
+        //generate a random number
+
+        let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(4));
+        // console.log(chooseRandomEnemy);
+
+        switch (chooseRandomEnemy) {
+            case 0:
+                enemy = enemy00;
+                break;
+
+                case 1:
+                enemy = enemy01;
+                break;
+
+                case 2:
+                enemy = enemy02;
+                break;
+
+                case 3:
+                enemy = enemy03;
+                break;
+        }
+        getHeader.innerHTML = '<p>Task: Choose Your Move</p>';
+
+        getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="PlayerMoves.calcAttack()" >Attack!!</a>';
+
+        getEnemy.innerHTML = '<img src= "img/avatar-enemies/' + enemy.enemyType.toLowerCase() + '.jpg" alt = " ' + enemy.enemyType + '" class= "img-avatar">   <div><h3>' + enemy.enemyType + '</h3>  <p class= "health-enemy">Health: ' + enemy.health + '</p> <p>Mana: ' + enemy.mana + '</p> <p>Strength: ' + enemy.strength + '</p> <p>Agility: ' + enemy.agility + '</p> <p>Speed: ' + enemy.speed + '</p> </div>';
     }
 }
