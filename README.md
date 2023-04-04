@@ -1,8 +1,5 @@
 # RPG-Game
 
-![Design preview for the Role Playing Game](img/shot1.jpg)
-![Design preview for the Role Playing Game](img/shot2.jpg)
-
 ## Hello! 👋
 A JavaScript project implementing the use of objects and constructors to create a simple Role Playing Game
 
