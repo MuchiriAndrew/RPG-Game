@@ -1,30 +1,45 @@
+<!-- BUILDING A BROWSER GAME USING JAVASCRIPT OBJECTS AND CONSTRUCTORS -->
+
 <!DOCTYPE html>
 <html>
+    
     <head>
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+        <!-- stylesheet link -->
         <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+
+        <!-- external javascript links -->
         <script src="JS/gameManager.js"></script>
         <script src="JS/player.js"></script>
         <script src="JS/enemy.js"></script>
     </head>
 
+
     <body>
         
+        <!-- tasks and text that belongs at the top of the game -->
         <div class="header">
             <p>My RPG Game!!</p>
             <h2>Choose your character!!</h2>
         </div>
 
+        <!-- is going to contain the avatars for your possible players -->
         <div class="interface">
 
-            <a href="#" onclick="GameManager.setGameStart('Warrior')">
+            <!-- we will not be going onto another page after we choose a character instead using JS we are going to replace the content in the different sections of the html page -->
+            
+            <a href="#" onclick="GameManager.setGameStart('Warrior')"> 
+                <!-- onclick event tells the browser that when the link is clicked a certain method/function runs-->
+
                 <img src="img/avatar-player/warrior.jpg" alt="warrior">
-                <div>
+                <div> 
+                    <!-- div box for the content and description of the characters -->
                     <h3>Warrior</h3>
-                    <p>(Warrior decription)</p>
+                    <p>Warriors have high strength and stamina, however their strength also makes them slower and clumsier</p>
                 </div>
             </a>
 
@@ -32,7 +47,7 @@
                 <img src="img/avatar-player/knight.jpg" alt="knight">
                 <div>
                     <h3>Knight</h3>
-                    <p>(Knight decription)</p>
+                    <p>Knight are fast and have high stamina which makes up for their lack of strength and health</p>
                 </div>
             </a>
 
@@ -40,7 +55,7 @@
                 <img src="img/avatar-player/fire mage.jpg" alt="fire mage">
                 <div>
                     <h3>Fire Mage</h3>
-                    <p>(Fire Mage decription)</p>
+                    <p>Fire mages are fire canons who put all their effort into spells. This means they slack on everything else</p>
                 </div>
             </a>
 
@@ -48,7 +63,7 @@
                 <img src="img/avatar-player/frost mage.jpg" alt="frost mage">
                 <div>
                     <h3>Frost Mage</h3>
-                    <p>(Frost Mage decription)</p>
+                    <p>Frost mages are icy canons who put all their effort into spells. This means they slack on everything else</p>
                 </div>
             </a>
 
@@ -64,10 +79,12 @@
             
         </div>
 
+        <!-- avatar for the chosen enemy -->
         <div class="enemy">
 
             
         </div>
 
     </body>
+
 </html>

@@ -1,3 +1,4 @@
+//declare in the global scope do that in can be available everywhere
 let enemy;
 
 function Enemy (enemyType, health, mana, strength, agility, speed) {
